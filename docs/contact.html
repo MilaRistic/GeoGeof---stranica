@@ -1,0 +1,120 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale="1.0>
+<!-- 
+meta - element koji daje informacije o stranici, ali nije vidljiv korisniku
+viewport - prozor kroz koji korisnik gleda stranicu (pravila prikaza)
+width=device-width - širina stranice jednaka širini ekrana uređaja
+1.0 - početno učitavanje stranice bez zumiranja (100%)
+
+Ukratko — ovaj deo koda govori pretraživaču:
+"Prikaži stranicu tako da tačno odgovara širini ekrana korisnika i 
+počni bez ikakvog uvećanja ili smanjenja."
+-->
+    <title>Udruženje studenata geodezije i geoinformatike Građevinskog fakulteta, Univerziteta u Beogradu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"><!--link za google font-->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"> <!-- priprema alata za teleofn da se zatvara i otvara meni-->
+</head>
+<body>
+    <section class="sub-header">
+        <nav> <!-- dodavanje loga-->
+            <a href="index.html"><img src="imagines/GRB_GeoGeof-removebg-preview.png" ></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i> <!--ikonica za X close-->
+                <ul>
+                    <li><a href="index.html">Naslovna</a></li>
+                    <li><a href="about.html">O udruženju</a></li>
+                    <li><a href="course.html">Šta nudimo</a></li>
+                    <li><a href="vesti.html">Vesti</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i><!-- meni tri crtice ikonica-->
+        </nav>
+        <h1>Kontaktiraj nas</h1>
+    </section>
+<!--------- contact us ---------->
+
+<section class="location">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.378589707693!2d20.473389276238343!3d44.8057780710708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7aa1e205709d%3A0x2ce5626d7a7aa379!2z0JPRgNCw0ZLQtdCy0LjQvdGB0LrQuCDRhNCw0LrRg9C70YLQtdGCINCj0L3QuNCy0LXRgNC30LjRgtC10YLQsCDRgyDQkdC10L7Qs9GA0LDQtNGD!5e1!3m2!1ssr!2srs!4v1755288867869!5m2!1ssr!2srs" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</section>
+
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fa-solid fa-house"></i>
+                <span>
+                    <h5>Kralja Aleksandra 73, Građevinski fakultet</h5>
+                    <p>Beograd, Republika Srbija</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa-solid fa-phone"></i>
+                <span>
+                    <h5>+381 69 3936 xxx</h5>
+                    <p>Ponedeljak – Petak, 10 AM – 6 PM</p>
+                </span>
+            </div>
+            <div>
+                <i class="fa-regular fa-envelope"></i> 
+                <!-- ili fa-solid fa-envelope ako želiš punu ikonu -->
+                <span>
+                    <h5>usg@gmail.com</h5>
+                    <p>Pošaljite nam svoj upit putem mejla</p>
+                </span>
+            </div>
+        </div>
+<div class="contact-col">
+    <form action="fomr-haldner.php" method="post">
+        <input type="text" name="name" placeholder="Unesi svoje ime" required>
+        <input type="email" name="email" placeholder="Unesi svoju mejl adresu" required>
+        <input type="text" name="subject" placeholder="Unesi svoje pitanje" required>
+        <textarea rows="8" name="message" placeholder="Poruka" required></textarea>
+        <button type="submit" class="hero-btn red-btn">Pošalji poruku</button>  
+    </form>
+
+
+
+
+</div>
+    </div>
+</section>
+
+
+<!--------- Footer ---------->
+<section class="footer">
+    <h4>O nama</h4>
+    <p>Udruženje studenata geodezije i geoinformatike Građevinskog fakulteta pruža studentima priliku za učenje, praktične vežbe i druženje kroz radionice, predavanja i terenske aktivnosti.</p>
+    <div class="icons">
+        <!-- Facebook -->
+        <i class="fa-brands fa-facebook"></i>
+        <!-- Twitter (X) -->
+        <i class="fa-brands fa-x-twitter"></i>
+        <!-- Instagram -->
+        <i class="fa-brands fa-instagram"></i>
+        <!-- LinkedIn -->
+        <i class="fa-brands fa-linkedin"></i>
+    </div>
+    <p>Napravljeno <i class="fa-regular fa-heart"></i> od stane Mila Ristic 1507/24</p>
+</section>
+
+
+<!------- JavaScript for Toogle Menu ---------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>

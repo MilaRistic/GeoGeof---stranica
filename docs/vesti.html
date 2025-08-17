@@ -1,0 +1,179 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale="1.0>
+<!-- 
+meta - element koji daje informacije o stranici, ali nije vidljiv korisniku
+viewport - prozor kroz koji korisnik gleda stranicu (pravila prikaza)
+width=device-width - širina stranice jednaka širini ekrana uređaja
+1.0 - početno učitavanje stranice bez zumiranja (100%)
+
+Ukratko — ovaj deo koda govori pretraživaču:
+"Prikaži stranicu tako da tačno odgovara širini ekrana korisnika i 
+počni bez ikakvog uvećanja ili smanjenja."
+-->
+    <title>Udruženje studenata geodezije i geoinformatike Građevinskog fakulteta, Univerziteta u Beogradu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"><!--link za google font-->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"> <!-- priprema alata za teleofn da se zatvara i otvara meni-->
+</head>
+<body>
+    <section class="sub-header">
+        <nav> <!-- dodavanje loga-->
+            <a href="index.html"><img src="imagines/GRB_GeoGeof-removebg-preview.png" ></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i> <!--ikonica za X close-->
+                <ul>
+                    <li><a href="index.html">Naslovna</a></li>
+                    <li><a href="about.html">O udruženju</a></li>
+                    <li><a href="course.html">Šta nudimo</a></li>
+                    <li><a href="vesti.html">Vesti</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i><!-- meni tri crtice ikonica-->
+        </nav>
+        <h1>Najnovije vesti i dešavanja<h1>
+    </section>
+
+<!--------VESTI-------->
+<section class="blog-content">
+    <div class="row">
+        <div class="blog-left">
+            <img src="imagines/covek.jpeg" >
+            <h2>Vesti iz oblasti nauke, struke i inovacionih tehnologija iz oblasti geodezije i geoinformatike</h2>
+            <p>Pre nekoliko meseci, naše Udruženje GeoGeof imalo je priliku da učestvuje u jednoj uzbudljivoj terenskoj vežbi. Cilj je bio da mapiramo mali deo grada koristeći dron i moderne GIS alate. Na početku smo svi bili pomalo skeptični – kako će jedna mala letelica i laptop zameniti klasične metode merenja? Međutim, već nakon prvih letova i prikupljenih podataka, shvatili smo koliko tehnologija može da olakša posao geodetama i omogući precizne analize u rekordnom vremenu.</p>
+            <br>
+            <p>Kroz rad na ovom projektu naučili smo kako se prikupljeni podaci transformišu u digitalne ortofoto karte, kako se kreiraju 3D modeli terena i kako se svi rezultati mogu koristiti za urbanističko planiranje i infrastrukturne projekte. Najvažnije od svega – shvatili smo da kombinacija teorije i prakse, uz korišćenje inovativnih tehnologija, čini našu struku dinamičnom i inspirativnom. Ovakva iskustva pokazuju studentima da geodezija nije samo crtanje i merenje – već istraživanje, inovacija i stvaranje stvarnog uticaja na prostor oko nas.</p>
+            
+            <div class="comment-box">
+                <h3>Ostavi komentar :)</h3>
+
+                <form class="comment-from"> <!--forma za unos imena, e-maila i komentara.----pravljenje za ostavljanje komentara-->
+                    <input type="text" placeholder="Ime">
+                    <p>Tvoj komentar napisi dole ispod</p>
+                    <textarea rows="5"placeholder="Tvoj komentar">
+                    </textarea>
+                    <button type="submit" class="hero-btn red-btn">Okači komentar</button>
+                
+                </form>
+                <!--NOVO: ovde se prikazuju komentari -->
+                <div id="comment-section"><!--novi deo gde će se ispisivati svi komentari.-->
+                    <h3>Komentari:</h3>
+                    <ul id="comment-list"></ul><!--prazna lista, u koju će JavaScript dodavati komentare kao-->
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="blog-right">
+            <h3>Trenutni status</h3>
+            <div>
+                <span>Broj članova</span>
+                <span>150</span>
+            </div>
+            <div>
+                <span>Godina postojanja</span>
+                <span>28</span>
+            </div>
+            <div>
+                <span>Završenih projekata</span>
+                <span>10</span>
+            </div>
+            <div>
+                <span>Podrška kompanija i organizacija</span>
+                <span>5</span>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+
+
+
+
+<!--------- Footer ---------->
+<section class="footer">
+    <h4>O nama</h4>
+    <p>Udruženje studenata geodezije i geoinformatike Građevinskog fakulteta pruža studentima priliku za učenje, praktične vežbe i druženje kroz radionice, predavanja i terenske aktivnosti.</p>
+    <div class="icons">
+        <!-- Facebook -->
+        <i class="fa-brands fa-facebook"></i>
+        <!-- Twitter (X) -->
+        <i class="fa-brands fa-x-twitter"></i>
+        <!-- Instagram -->
+        <i class="fa-brands fa-instagram"></i>
+        <!-- LinkedIn -->
+        <i class="fa-brands fa-linkedin"></i>
+    </div>
+    <p>Napravljeno <i class="fa-regular fa-heart"></i> od stane Mila Ristic 1507/24</p>
+</section>
+
+
+
+
+
+<!------- JavaScript for Toogle Menu ---------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+<!-- ✅ JavaScript za komentare -->
+<!-- ✅ JavaScript za komentare -->
+<script>
+// Kada se forma za komentare pošalje (klik na dugme "Pošalji")
+document.querySelector(".comment-from").addEventListener("submit", function(e){
+    e.preventDefault(); // Sprečava da se stranica osveži pri slanju forme
+
+    // Uzimamo vrednosti iz polja forme
+    let name = e.target.querySelector("input[type=text]").value;   // Ime korisnika
+    let email = e.target.querySelector("input[type=email]").value; // Email korisnika
+    let comment = e.target.querySelector("textarea").value;        // Tekst komentara
+
+    // Provera da li su sva polja popunjena
+    if(name && email && comment){
+        // Kreiramo novi <li> element u listi komentara
+        let li = document.createElement("li");
+        li.innerHTML = `<strong>${name}</strong>: ${comment}`;
+        
+        // Dodajemo novi komentar u listu komentara na stranici
+        document.getElementById("comment-list").appendChild(li);
+
+        // Čuvamo komentare u localStorage da ostanu i posle osvežavanja stranice
+        let comments = JSON.parse(localStorage.getItem("comments") || "[]"); // Uzimamo postojeće komentare
+        comments.push({name, comment}); // Dodajemo novi
+        localStorage.setItem("comments", JSON.stringify(comments)); // Upisujemo nazad u localStorage
+
+        // Resetujemo formu (brišemo unete podatke iz polja)
+        e.target.reset();
+    }
+});
+
+// Kada se stranica učita, prikazujemo komentare iz localStorage
+window.addEventListener("load", function(){
+    let comments = JSON.parse(localStorage.getItem("comments") || "[]"); // Učitavamo komentare iz localStorage
+    comments.forEach(c => {
+        // Za svaki komentar pravimo novi <li> i dodajemo ga u listu
+        let li = document.createElement("li");
+        li.innerHTML = `<strong>${c.name}</strong>: ${c.comment}`;
+        document.getElementById("comment-list").appendChild(li);
+    });
+});
+</script>
+
+
+
+</body>
+</html>
