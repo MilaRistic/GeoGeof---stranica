@@ -1,0 +1,204 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale="1.0>
+<!-- 
+meta - element koji daje informacije o stranici, ali nije vidljiv korisniku
+viewport - prozor kroz koji korisnik gleda stranicu (pravila prikaza)
+width=device-width - širina stranice jednaka širini ekrana uređaja
+1.0 - početno učitavanje stranice bez zumiranja (100%)
+
+Ukratko — ovaj deo koda govori pretraživaču:
+"Prikaži stranicu tako da tačno odgovara širini ekrana korisnika i 
+počni bez ikakvog uvećanja ili smanjenja."
+-->
+    <title>Udruženje studenata geodezije i geoinformatike Građevinskog fakulteta, Univerziteta u Beogradu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"><!--link za google font-->
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"> <!-- priprema alata za teleofn da se zatvara i otvara meni-->
+</head>
+<body>
+    <section    class="header">
+        <nav> <!-- dodavanje loga-->
+            <a href="index.html"><img src="imagines/GRB_GeoGeof-removebg-preview.png" ></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i> <!--ikonica za X close-->
+                <ul>
+                    <li><a href="index.html">Naslovna</a></li>
+                    <li><a href="about.html">O udruženju</a></li>
+                    <li><a href="course.html">Šta nudimo</a></li>
+                    <li><a href="vesti.html">Vesti</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i><!-- meni tri crtice ikonica-->
+        </nav>
+<div class="text-box">
+    <h1>GeoGeof </h1>
+    <h1> - Udruženje studenata geodezije i geoinformatike - </h1>
+    <p>Dobrodošli na sajt Udruženja studenata geodezije i geoinformatike Građevinskog fakulteta, Univerziteta u Beogradu!
+    </p>
+    <a href="about.html" class="hero-btn">Saznaj šta nas izdvaja iz mase!</a>
+</div>
+
+
+    </section>
+
+
+<!-- ------Šta se nudi ------->
+<section class="course">
+    <h1>Šta nudimo</h1>
+    <p>Stručne radionice,predavanja i terenske vezbe za studente geodezije.</p>
+<!--Dodavanje tri diferent kolone-->
+    <div class="row">
+        <div class="course-col">
+            <h3>Radionice</h3>
+            <p>Praktične vežbe i projekti iz geodezije i GIS-a.</p>
+        </div>
+        <div class="course-col">
+            <h3>Predavanja</h3>
+            <p>Stručni seminari i predavanja profesora i inženjera.</p>
+        </div>
+        <div class="course-col">
+            <h3>Terenske vežbe</h3>
+            <p>Rad na terenu sa savremenom geodetskom opremom.</p>
+        </div>
+    </div>
+
+</section>
+
+<!--- campusss --->
+<section class="campus">
+    <h1>Saradnici</h1>
+    <p>Udruženje studenata geodezije i geoinformatike sarađuje sa Univerzitetom u Beogradu – Građevinskim fakultetom kako bi studentima pružilo najbolje iskustvo učenja i praktične vežbe.</p>  
+    
+    <div class="row">
+       <div class="campus-col">
+            <img src="imagines/logo uni.png">
+            <div class="layer">
+                <h3>UNIVERZITET U BEOGRADU</h3>
+            </div>
+        </div>
+        <div class="campus-col">
+            <img src="imagines/logo grf.png">
+            <div class="layer">
+                <h3>GRAĐEVINSKI FAKULTET</h3>
+            </div>
+        </div>
+    
+        <div class="campus-col">
+            <img src="imagines/GRB_GeoGeof.png">
+            <div class="layer">
+                <h3>GeoGeof</h3>
+            </div>
+        </div>
+    </div>
+    
+
+</section>
+
+<!------------Facilities -------->
+<section class="facilities">
+    <h1>Naši sadržaji</h1>
+    <p>Udruženje studenata geodezije i geoinformatike pruža studentima razne sadržaje za učenje, praktične vežbe i druženje.</p> 
+
+    <div class="row">
+         <div class="facilities-col">
+            <img src="imagines/library.png">
+            <h3>Biblioteka i resursi</h3>
+            <p>Stručna literatura i digitalni resursi za GIS i geodeziju.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="imagines/laboratorija.jpeg">
+            <h3>Laboratorije i oprema</h3>
+            <p>Praktične vežbe sa GNSS, totalnim stanicama i CAD/GIS softverom.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="imagines/radionice.jpeg">
+            <h3>Radionice i predavanja</h3>
+            <p>Stručni seminari, predavanja i tutorijali od profesora i studenata.</p>
+        </div>
+        <div class="facilities-col">
+            <img src="imagines/basketball.png">
+            <h3>Sportski i društveni sadržaji</h3>
+            <p>Rekreacija, sportske aktivnosti i druženja članova udruženja.</p>
+        </div>
+    </div>
+</section>
+<!--- testionials----->
+<section class="testimonials">
+    <h1>Šta naši članovi kažu</h1>
+    <p>Iskustva naših članova i polaznika radionica</p> 
+    <div class="row">
+        <div class="testimonials-col">
+            <img src="imagines/user1.jpg">
+            <div>
+                <p>Radionice su bile izuzetno korisne! Profesori su strpljivi i detaljno objašnjavaju svaki korak. Naučila sam mnogo o GIS softveru i praktičnim vežbama na terenu.
+                </p>
+                <h3>Marija Petrović</h3>
+                <i class="fa-solid fa-star"></i> <!-- puna zvezda-->
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>     <!-- prazna -->
+            </div>
+        </div>
+        <div class="testimonials-col">
+            <img src="imagines/user2.jpg">
+            <div>
+                <p>Sadržaji su odlični, laboratorije i oprema su moderne. Samo bih voleao da ima više praktičnih vežbi sa GNSS uređajima, ali sve u svemu, iskustvo je bilo veoma pozitivno.
+                </p>
+                <h3>Marko Jovanović</h3>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i> <!-- pola puna -->
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-------Call To Action---------->
+<section class="cta">
+    <h1>Pridruži se našim radionicama i predavanjima<br>i unapredi svoje znanje iz geodezije i geoinformatike!</h1>
+        <a href="contact.html" class="hero-btn">Kontaktiraj nas</a>
+</section>
+
+<!--------- Footer ---------->
+<section class="footer">
+    <h4>O nama</h4>
+    <p>Udruženje studenata geodezije i geoinformatike Građevinskog fakulteta pruža studentima priliku za učenje, praktične vežbe i druženje kroz radionice, predavanja i terenske aktivnosti.</p>
+    <div class="icons">
+        <!-- Facebook -->
+        <i class="fa-brands fa-facebook"></i>
+        <!-- Twitter (X) -->
+        <i class="fa-brands fa-x-twitter"></i>
+        <!-- Instagram -->
+        <i class="fa-brands fa-instagram"></i>
+        <!-- LinkedIn -->
+        <i class="fa-brands fa-linkedin"></i>
+    </div>
+    <p>Napravljeno <i class="fa-regular fa-heart"></i> od stane Mila Ristic 1507/24</p>
+</section>
+
+
+
+
+
+<!------- JavaScript for Toogle Menu ---------->
+<script>
+
+    var navLinks = document.getElementById("navLinks");
+    function showMenu() {
+        navLinks.style.right = "0";
+    }
+    function hideMenu() {
+        navLinks.style.right = "-200px";
+    }
+
+</script>
+
+</body>
+</html>
