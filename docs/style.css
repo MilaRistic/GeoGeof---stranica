@@ -159,7 +159,7 @@ h3{
 .course-col:hover{ /*pravi se shadow kada stavimo mis na box*/
     box-shadow: 0 0 20px 0px rgba(0, 0, 0, 2);
 }
-@media(max-width: 70px){/*kako se vidi na teleofnu lepse*/
+@media(max-width: 700px){/*kako se vidi na teleofnu lepse*/
     .row{
         flex-direction: column;
     }
